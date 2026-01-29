@@ -8,101 +8,17 @@ html, body {
 }
 
 
-body {
-  transition: background-color 0.3s ease;
-}
-
-
-.fixed-button-container {
-  position: fixed;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.tooltip-bubble {
-  position: relative;
-  background-color: white;
-  color: red;
-  padding: 6px 12px;
-  border-radius: 12px;
-  font-size: 0.75rem; 
-
-
-  margin-left: 100px; 
-  
-
-  top: 13px; 
-
-  opacity: 0;
-
-  transform: translateX(15px); 
-  transition: all 0.4s ease-in-out;
-  pointer-events: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  white-space: nowrap;
-}
-
-
-.tooltip-bubble::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  transform: translateY(-50%);
-  border-width: 6px;
-  border-style: solid;
-  border-color: transparent white transparent transparent; 
-}
-
-.tooltip-bubble.is-visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-
-.heart-button {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  clip-path: path('M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.06 3.06 6.06 12 14.125 8.94-8.065 12-10.065 12-14.125 0-8.165-10.011-8.967-12-3.568z');
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  animation: pulse-heart 1.5s infinite ease-in-out;
-}
-
-@keyframes pulse-heart {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
-}
-
-
-
-.heart-button:hover {
-  background-color: hotpink; 
-}
 
 
 
 
 
 
-@keyframes popin {
-  from { transform: translateX(-50%) translateY(10px); }
-  to { transform: translateX(-50%) translateY(0); }
-}
 
 
-.heart-button {
-  position: relative; 
-}
+
+
+
+
+
+

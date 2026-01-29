@@ -43,7 +43,7 @@ export default function ModernPage() {
 
          <Link href="/intro" style={{ textDecoration: 'none' }}>
     <button className="heart-button">
-      START
+    
     </button>
   </Link>
       </div>

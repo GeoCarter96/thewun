@@ -1,0 +1,70 @@
+/* Desktop: Hidden */
+.mobile-landing-container {
+  display: none;
+}
+
+/* Mobile-only (max-width: 768px) */
+@media (max-width: 768px) {
+  .mobile-landing-container {
+    display: flex;
+    flex-direction: row; /* Button and tooltip side-by-side */
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: fixed;
+    bottom: 40px; /* Floating at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+    margin-top: 20px;
+      padding: 20px 0; 
+
+    overflow: visible; 
+  }
+
+  .landing-heart-button {
+      margin: 0; 
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 0.5rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+overflow: visible;
+   clip-path: path('M20 38c-18-12-20-20-20-26 0-8 6-11 10-11 5 0 10 4 10 4s5-4 10-4c4 0 10 3 10 11 0 6-2 14-20 26z');
+  
+  
+  animation: pulse-heart 1.5s infinite ease-in-out;
+}
+
+
+  .landing-tooltip {
+    opacity: 0;
+    background-color: white;
+    color: #ff4d6d;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    transform: translateX(-10px);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .landing-tooltip.is-visible {
+    opacity: 1;
+    transform: translateX(10px); /* Slides bubble to the right */
+  }
+}
+
+@keyframes pulse-heart {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

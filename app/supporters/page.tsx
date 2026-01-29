@@ -41,10 +41,7 @@ export default function SupportersPage() {
       )}
 
     
-      <footer className="fancy-footer">
-        <Link href="https://www.imvu.com" target="_blank" className="fancy-link">IMVU STORE</Link>
-        <Link href="https://secondlife.com" target="_blank" className="fancy-link">SECOND LIFE STORE</Link>
-      </footer>
+      
     </main>
   );
 }
