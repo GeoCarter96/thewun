@@ -1,13 +1,15 @@
 "use client";
-import { useState } from 'react';
-import { usePathname } from 'next/navigation'; // Import hook to track current route
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation'; 
 import './sidebar.css'; 
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); // Get current URL path
-
-  // 1. If the current path is exactly "/", don't render anything
+  const pathname = usePathname(); 
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+  
   if (pathname === "/") {
     return null;
   }
