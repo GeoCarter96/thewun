@@ -1,4 +1,5 @@
 'use client'
+import MobileLandingButton from '@/components/mobilebutton';
 import './Home.css'
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
@@ -35,17 +36,20 @@ export default function ModernPage() {
       </div>
 
     
-      <div className="fixed-button-container">
+      <div className="fixed-button-containers">
         
         <div className={`tooltip-bubble ${showMessage ? 'is-visible' : ''}`}>
           click me to get started
         </div>
-
+ 
          <Link href="/intro" style={{ textDecoration: 'none' }}>
     <button className="heart-button">
     
     </button>
+     
   </Link>
+  
+
       </div>
     </div>
   );

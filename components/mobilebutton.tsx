@@ -7,9 +7,13 @@ import './mobilebutton.css';
 export default function MobileLandingButton() {
   const [showMessage, setShowMessage] = useState(false);
   const pathname = usePathname();
-
+ const [mounted, setMounted] = useState(false);
+ 
   useEffect(() => {
-    if (pathname !== "/") return; 
+    setMounted(true); 
+  }, []);
+  useEffect(() => {
+    if (pathname !== "/") return ; 
 
     const trigger = () => {
       setShowMessage(true);

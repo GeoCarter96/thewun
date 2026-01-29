@@ -3,19 +3,19 @@
   display: none;
 }
 
-/* Mobile-only (max-width: 768px) */
+
 @media (max-width: 768px) {
   .mobile-landing-container {
-    display: flex;
-    flex-direction: row; /* Button and tooltip side-by-side */
+    display: flex !important;
+    flex-direction: row; 
     align-items: center;
     justify-content: center;
     gap: 12px;
     position: fixed;
-    bottom: 40px; /* Floating at the bottom */
+    bottom: 40px; 
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1000;
+    z-index: 9999 !important;
     width: 100%;
     margin-top: 20px;
       padding: 20px 0; 

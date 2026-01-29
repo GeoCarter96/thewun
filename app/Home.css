@@ -115,7 +115,7 @@ body {
 }
 
 
-.fixed-button-container {
+.fixed-button-containers {
   position: fixed;
   bottom: 40px;
   left: 50%;

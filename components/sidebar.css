@@ -1,6 +1,6 @@
 
 .fixed-button-container, .sidebar-panel, .sidebar-overlay {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 768px) {
