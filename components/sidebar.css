@@ -5,7 +5,7 @@
 
 @media (max-width: 768px) {
   .fixed-button-container {
-    display: block;
+    display: block !important;
     position: fixed;
     top: 25px;
     right: 20px;
@@ -38,7 +38,7 @@
   }
 
     .sidebar-panel {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     position: fixed;
     top: 0;
