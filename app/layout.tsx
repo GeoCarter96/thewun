@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Orb from "@/components/orb";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,20 +16,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SHEGO",
+  title: "THE WUN",
   description: "Second Life And IMVU Creator",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  
+
+  
+  
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      <Orb />
         {children}
       </body>
     </html>

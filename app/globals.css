@@ -12,13 +12,13 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* Container to lock the button to the bottom center */
+
 .fixed-button-container {
   position: fixed;
-  bottom: 40px; /* Distance from the bottom edge */
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100; /* Ensures it stays above all other layers */
+  z-index: 100; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,14 +32,14 @@ body {
   border-radius: 12px;
   font-size: 0.75rem; 
 
-  /* 1. Move slightly to the right */
+
   margin-left: 100px; 
   
-  /* 2. Move slightly lower */
+
   top: 13px; 
 
   opacity: 0;
-  /* Updated to start slightly further right for a smooth slide-in */
+
   transform: translateX(15px); 
   transition: all 0.4s ease-in-out;
   pointer-events: none;
@@ -47,7 +47,7 @@ body {
   white-space: nowrap;
 }
 
-/* Ensure the tail stays aligned with the bubble's new position */
+
 .tooltip-bubble::after {
   content: "";
   position: absolute;
@@ -64,7 +64,7 @@ body {
   transform: translateX(0);
 }
 
-/* The Heart Button */
+
 .heart-button {
   width: 100px;
   height: 100px;
@@ -91,7 +91,7 @@ body {
 .heart-button:hover {
   background-color: hotpink; 
 }
-/* Existing pulse-heart animation definition... */
+
 
 
 
@@ -102,8 +102,7 @@ body {
   to { transform: translateX(-50%) translateY(0); }
 }
 
-/* Make sure the heart button can act as a positioning context for the tooltip */
+
 .heart-button {
-  position: relative; /* CRITICAL: ensures tooltip positions relative to the heart */
-  /* ... rest of your heart button styles (width, height, clip-path, animation) ... */
+  position: relative; 
 }
