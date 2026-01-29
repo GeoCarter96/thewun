@@ -40,9 +40,10 @@ export default function Sidebar() {
           <a href="/" className="nav-item">Landing</a>
           <a href="/intro" className="nav-item">Intro</a>
           <a href="/supporters" className="nav-item">Supporters</a>
+         <a href="/upcoming" className="nav-item">Upcoming</a>
           <a href="/contact" className="nav-item">Contact Me</a>
-          <a href="https://imvu.com" target="_blank" className="nav-item">IMVU Store</a>
-          <a href="https://secondlife.com" target="_blank" className="nav-item">SL Store</a>
+          <a href="https://www.imvu.com/shop/web_search.php?manufacturers_id=195283496" target="_blank" className="nav-item">IMVU Store</a>
+          <a href="https://marketplace.secondlife.com/en-US/stores/226082" target="_blank" className="nav-item">SL Store</a>
         </nav>
       </div>
     </>

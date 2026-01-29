@@ -15,9 +15,10 @@ export default function Orb() {
         <Link href="/" className="orb-menu-link">Landing</Link>
         <Link href="/intro" className="orb-menu-link">Intro</Link>
         <Link href="/supporters" className="orb-menu-link">Supporters</Link>
+                  <Link href="/upcoming" className="orb-menu-link">Upcoming</Link>
         <Link href="/contact" className="orb-menu-link">Contact Me</Link>
-        <Link href="https://imvu.com" target="_blank" className="orb-menu-link">IMVU Store</Link>
-        <Link href="https://secondlife.com" target="_blank" className="orb-menu-link">SL Store</Link>
+        <Link href="https://www.imvu.com/shop/web_search.php?manufacturers_id=195283496" target="_blank" className="orb-menu-link">IMVU Store</Link>
+        <Link href="https://marketplace.secondlife.com/en-US/stores/226082" target="_blank" className="orb-menu-link">SL Store</Link>
       </div>
 
     

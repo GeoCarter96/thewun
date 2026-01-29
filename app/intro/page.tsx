@@ -21,9 +21,7 @@ export default function IntroPage() {
             THE DONDADA 
           </h2>
           <p className="intro-description">
-            "Welcome to the inner SIM. This summary is where we track the mesh 
-            attachments and script updates. I've optimized this space so your 
-            avatar feels light, even when the textures are heavy."
+            "Hello, and welcome to my world! I am a Virtual Artist of 8+ Years! Throughout this page, you can find  my links to my catalog(s) and know more about me!"
           </p>
         </article>
       </section>

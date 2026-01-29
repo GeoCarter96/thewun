@@ -1,0 +1,58 @@
+
+
+.supporters-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+   background-color: #EDCEC9; 
+  padding: 20px;
+}
+
+.fancy-card-container {
+  width: 100%;
+  max-width: 400px;
+
+  background-color: rgba(255, 255, 255, 0.4); 
+  backdrop-filter: blur(20px); 
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(219, 39, 119, 0.2); 
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.6); 
+}
+
+.label-section {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.fancy-label-text {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #db2777; 
+  letter-spacing: 2px;
+  opacity: 0.9;
+}
+
+.fancy-top-label {
+ 
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(219, 39, 119, 0.1);
+}
+
+.fancy-bottom-label, .fancy-bottom-label-secondary {
+  background-color: transparent; 
+  margin-top: 15px; 
+}
+
+.fancy-image-area {
+  background-color: transparent;
+  min-height: 300px;
+  margin: 15px;
+  border-radius: 10px;
+ 
+  box-shadow: inset 0 0 15px rgba(219, 39, 119, 0.1); 
+}
+
