@@ -1,26 +1,109 @@
-@import "tailwindcss";
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #EDCEC9; 
+  min-height: 100vh;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+  width: 100%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* Container to lock the button to the bottom center */
+.fixed-button-container {
+  position: fixed;
+  bottom: 40px; /* Distance from the bottom edge */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100; /* Ensures it stays above all other layers */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tooltip-bubble {
+  position: relative;
+  background-color: white;
+  color: red;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem; 
+
+  /* 1. Move slightly to the right */
+  margin-left: 100px; 
+  
+  /* 2. Move slightly lower */
+  top: 13px; 
+
+  opacity: 0;
+  /* Updated to start slightly further right for a smooth slide-in */
+  transform: translateX(15px); 
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+/* Ensure the tail stays aligned with the bubble's new position */
+.tooltip-bubble::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent white transparent transparent; 
+}
+
+.tooltip-bubble.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* The Heart Button */
+.heart-button {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  clip-path: path('M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.06 3.06 6.06 12 14.125 8.94-8.065 12-10.065 12-14.125 0-8.165-10.011-8.967-12-3.568z');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  animation: pulse-heart 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse-heart {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+
+.heart-button:hover {
+  background-color: hotpink; 
+}
+/* Existing pulse-heart animation definition... */
+
+
+
+
+
+@keyframes popin {
+  from { transform: translateX(-50%) translateY(10px); }
+  to { transform: translateX(-50%) translateY(0); }
+}
+
+/* Make sure the heart button can act as a positioning context for the tooltip */
+.heart-button {
+  position: relative; /* CRITICAL: ensures tooltip positions relative to the heart */
+  /* ... rest of your heart button styles (width, height, clip-path, animation) ... */
 }

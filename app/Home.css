@@ -1,0 +1,76 @@
+
+
+.modern-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EDCEC9; 
+  overflow: hidden;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  
+}
+
+.image-background-placeholder {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border-radius: 60px;
+  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  z-index: 1; 
+  pointer-events: none; 
+}
+
+.logo-img {
+  
+  position: relative; 
+  z-index: 2; 
+  opacity: 1; 
+  filter: brightness(2) contrast(1.2);
+ max-width: 60%; 
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+.content-card {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+  
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 4rem;
+  border-radius: 40px;
+ 
+ 
+  text-align: center;
+}
+
+.intro-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+.intro-placeholder-box {
+ 
+  padding: 2rem;
+  border-radius: 20px;
+ font-weight: 900;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
