@@ -1,11 +1,11 @@
-'use client'; // Required for interactivity
+'use client'; 
 import React, { useState } from 'react';
 import './supporters.css';
-import Link from 'next/link';
+
 
 export default function SupportersPage() {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
-  const placeholders = Array.from({ length: 10 });
+  const placeholders = Array.from({ length: 12 });
 
   return (
     <main className="supporters-page">

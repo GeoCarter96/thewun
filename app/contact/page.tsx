@@ -1,11 +1,37 @@
+"use client";
+
+import { useRef, FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
 import './contact.css';
 
 export default function ContactPage() {
-    const sparkles = Array.from({ length: 20 });
+  const form = useRef<HTMLFormElement>(null);
+  const sparkles = Array.from({ length: 20 });
+
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!form.current) return;
+
+
+    emailjs.sendForm(
+      'service_6gs161w', 
+      'template_84mjjgf', 
+      form.current, 
+      'BVERea-f4iBG3WZtP'
+    )
+      .then(() => {
+          alert("Message sent! 💖");
+          e.currentTarget.reset(); 
+      }, (error) => {
+          console.error('FAILED...', error.text);
+      });
+  };
 
   return (
     <main className="contact-container">
-         <div className="sparkle-field">
+     
+      <div className="sparkle-field">
         {sparkles.map((_, i) => (
           <div 
             key={i} 
@@ -21,13 +47,14 @@ export default function ContactPage() {
           />
         ))}
       </div>
+
       <div className="contact-card">
         <h1 className="contact-title">CONTACT THE WUN 💅🏽</h1>
         
-        <form className="contact-form">
+        <form ref={form} onSubmit={sendEmail} className="contact-form">
           <div className="input-group">
             <label className="input-label">Which Grid?</label>
-            <select className="contact-select" defaultValue="" required>
+            <select name="grid_type" className="contact-select" defaultValue="" required>
               <option value="" disabled>Select IMVU or Second Life</option>
               <option value="imvu">IMVU</option>
               <option value="sl">Second Life (SL)</option>
@@ -36,17 +63,18 @@ export default function ContactPage() {
 
           <div className="input-group">
             <label className="input-label">Avatar / Real Name</label>
-            <input type="text" className="contact-input" placeholder="Who are you?" required />
+            <input name="user_name" type="text" className="contact-input" placeholder="Who are you?" required />
           </div>
 
           <div className="input-group">
             <label className="input-label">Email Address</label>
-            <input type="email" className="contact-input" placeholder="Your Email" required />
+            <input name="user_email" type="email" className="contact-input" placeholder="Your Email" required />
           </div>
 
           <div className="input-group">
             <label className="input-label">Reason for Contact</label>
             <textarea 
+              name="message" 
               className="contact-textarea" 
               rows={4} 
               placeholder="Custom mesh? Collaboration? Say hello!" 
