@@ -22,7 +22,7 @@ export default function ContactPage() {
     )
       .then(() => {
           alert("Message sent! 💖");
-          e.currentTarget.reset(); 
+           form.current?.reset(); 
       }, (error) => {
           console.error('FAILED...', error.text);
       });
